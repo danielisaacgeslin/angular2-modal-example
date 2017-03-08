@@ -1,3 +1,10 @@
-<h1>
-  {{title}}
-</h1>
+<button (click)="modalIsOpen = !modalIsOpen">open</button>
+
+<p>modal is open: <strong>{{modalIsOpen}}</strong></p>
+
+<app-modal [(visible)]="modalIsOpen">
+    <div>
+        <h2>modal content</h2>
+        <p>flexible modal content</p>
+    </div>
+</app-modal>
